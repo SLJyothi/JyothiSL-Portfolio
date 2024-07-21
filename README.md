@@ -4,7 +4,7 @@ This is my first portfolio, built using HTML, CSS, and Javascript. I've used Jav
 
 Feel free to clone this repository and customize it to your liking.
 
-You can also check out the live repository [here](https://itssofi.dev/).
+You can also check out the live repository [here](https://sljyothi.github.io/JyothiSL-Portfolio/).
 
 Don't forget to give this repository a star ⭐ if you find it helpful.
 
