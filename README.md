@@ -16,7 +16,7 @@ This project is licensed under the MIT License.
 
 [Visit my website](https://sljyothi.github.io/JyothiSL-Portfolio/)
 
-![image](https://github.com/SofiDevO/SofiDev-landingpage/assets/102200061/448f27ea-1efc-4608-a439-2e81cae00fc4)
+![image](assets/img/PortfolioImg/Jyothi_SL_Pro1.jpeg)
 
-![image](https://github.com/SofiDevO/SofiDev-landingpage/assets/102200061/fcd22a9d-5ff7-4673-a2a6-f51b65e4c213)
-![image](https://github.com/SofiDevO/SofiDev-landingpage/assets/102200061/e0ed8666-e6f2-40be-a538-82bd019aa3d0)
+![image](assets/img/PortfolioImg/Jyothi_SL_Pro2.jpeg)
+![image](assets/img/PortfolioImg/Jyothi_SL_Pro3.jpeg)
