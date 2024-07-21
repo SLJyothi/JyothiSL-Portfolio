@@ -19,5 +19,5 @@ This project is licensed under the MIT License.
 ![image](assets/img/PortfolioImg/Jyothi_SL_Pro2.png)
 ![image](assets/img/PortfolioImg/Jyothi_SL_Pro4.png)
 
-![image](assets/img/PortfolioImg/Jyothi_SL_Pro1.jpeg)
-![image](assets/img/PortfolioImg/Jyothi_SL_Pro3.jpeg)
+![image](assets/img/Jyothi_SL_Pro1.png)
+
