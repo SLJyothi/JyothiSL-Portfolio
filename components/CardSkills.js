@@ -33,34 +33,40 @@ const cardsData = [
         class: "javascript"
     },
     {
-        imgSrc: "./assets/svg/react-dark.svg",
-        imgAlt: "React icon",
-        title: "React<br>✅",
-        class: "React"
+        imgSrc: "./assets/svg/Python.svg,
+        imgAlt: "Python icon",
+        title: "Python<br>✅",
+        class: "Python"
     },
     {
-        imgSrc: "./assets/svg/astro.svg",
-        imgAlt: "Astro icon",
-        title: "Astro<br>✅",
+        imgSrc: "./assets/svg/NumPy.svg",
+        imgAlt: "NumPy icon",
+        title: "NumPy<br>✅",
         class: ""
     },
     {
-        imgSrc: "./assets/svg/wordpress-icon.svg",
-        imgAlt: "Wordpress icon",
-        title: "Wordpress<br>✅",
-        class: "wordpress"
+        imgSrc: "./assets/svg/Pandas.svg",
+        imgAlt: "Pandas icon",
+        title: "Pandas<br>✅",
+        class: "Pandas"
     },
     {
-        imgSrc: "./assets/svg/nodejs-dark.svg",
-        imgAlt: "Node.js icon",
-        title: "Node.js<br>🌱",
+        imgSrc: "./assets/svg/Microsoft_Excel.svg",
+        imgAlt: "Microsoft Excel icon",
+        title: "Microsoft Excel.js<br>✅",
         class: ""
     },
     {
-        imgSrc: "./assets/svg/npm-wordmark.svg",
-        imgAlt: "Wordpress icon",
-        title: "npm<br>✅",
-        class: "npm"
+        imgSrc: "./assets/svg/power-bi-logo.svg",
+        imgAlt: "Power bi icon",
+        title: "Power bi<br>✅",
+        class: "Power bi"
+    },
+    {
+         imgSrc: "./assets/svg/seaborn-seeklogo.svg",
+        imgAlt: "Seaborn icon",
+        title: "Seaborn<br>✅",
+        class: "Seaborn"
     },
     {
         imgSrc: "./assets/svg/mysql.svg",
