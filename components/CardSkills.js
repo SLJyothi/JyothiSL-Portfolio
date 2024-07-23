@@ -16,8 +16,8 @@ const cardsData = [
     },
     {
         imgSrc: "./assets/svg/sass.svg",
-        imgAlt: "Sass icon",
-        title: "Sass<br>✅",
+        imgAlt: "Sas icon",
+        title: "Sas<br>✅",
         class: ""
     },
     {
