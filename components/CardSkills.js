@@ -35,7 +35,7 @@ const cardsData = [
     {
         imgSrc: "./assets/svg/Python.svg,
         imgAlt: "Python icon",
-        title: "Python<br>✅",
+        title: "python<br>✅",
         class: "Python"
     },
     {
@@ -63,15 +63,15 @@ const cardsData = [
         class: "Power bi"
     },
     {
-         imgSrc: "./assets/svg/seaborn-seeklogo.svg",
+        imgSrc: "./assets/svg/seaborn-seeklogo.svg",
         imgAlt: "Seaborn icon",
         title: "Seaborn<br>✅",
-        class: "Seaborn"
+        class: ""
     },
     {
         imgSrc: "./assets/svg/mysql.svg",
         imgAlt: "MySql icon",
-        title: "MySql<br> Server<br>🌱",
+        title: "MySql<br> Server<br>✅",
         class: ""
     },
     
