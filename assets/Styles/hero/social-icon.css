@@ -8,7 +8,7 @@
 
 .social__link {
 	position: absolute;
-	z-index: 20;
+	z-index: 30;
 }
 .github {
   bottom: 60px;
