@@ -1,0 +1,182 @@
+.formulario {
+	display: flex;
+    background-size: 197px;
+	flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 20;
+    position: relative;
+    width: 100%;
+	padding: 3rem 0;
+}
+
+.form__caja{
+	display: flex;
+	flex-direction: column-reverse;
+    width: 100%;
+	align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.form__container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+}
+
+.form__img{
+	width: 31%;
+    border-radius: 50%;
+    object-fit: fill;
+    min-width: 14rem;
+}
+.formulario .titulo {
+	color: var(--seccond-color);
+}
+
+.form__content {
+	display: flex;
+    align-items: stretch;
+	margin-bottom: 15px;
+	justify-content: space-evenly;
+	gap: 10px;
+	flex-direction: column;
+	padding: 3rem;
+}
+
+.input-container input {
+	padding: 11px;
+	width: 100%;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.input-container .text__boxes {
+	padding: 6px;
+	width: 100%;
+}
+
+.input-container label {
+	font-size: 2rem;
+	color: var(--seccond-color);
+}
+
+/* validaciones formulario */
+.contact_form_loader {
+	display: flex;
+	justify-content: center;
+	margin-top: 34px;
+}
+
+.contact__div__form__response {
+	display: flex;
+	justify-content: center;
+	font-size: 1.5rem;
+	color: white;
+}
+
+.formulario__contacto [required]:valid {
+	border: 2px solid var(--form-ok-color);
+}
+.formulario__contacto [required]:invalid {
+	border: 1.5px solid var(--form-error-color);
+}
+
+.contact-form-error {
+	display: flex;
+	justify-content: center;
+	margin-top: 0rem;
+	font-size: 80%;
+	background-color: var(--form-error-color);
+	transition: all 800ms ease;
+	font-size: 1.2rem;
+}
+
+.contact-form-error.is-active {
+	display: block;
+	animation: show-message 1s 1 normal 0s ease-in-out both;
+}
+.contact-form-span {
+	display: block;
+	display: flex;
+	justify-content: center;
+	margin-top: 0rem;
+	font-size: 80%;
+	background-color: var(--form-error-color);
+	animation: show-message 1s 1 normal 0s ease-in-out both;
+	font-size: 1.1rem;
+}
+.none {
+	display: none;
+}
+
+@keyframes show-message {
+	0% {
+		visibility: hidden;
+		opacity: 0;
+	}
+	100% {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+@media (min-width: 768px) {
+	.formulario {
+		align-items: center;
+	}
+
+	.form__caja {
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+		width: 80%;
+		flex-wrap: nowrap;
+		gap: 3%;
+	}
+	.form__img{
+		width: 30%;
+		height: 56rem;
+		object-fit: cover;
+		border-radius: 0%;
+	}
+	
+
+	.formulario__caja {
+		display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    width: 59%;
+    max-width: 65%;
+    height: auto;
+    min-width: 45rem;
+	}
+	
+	.input-container .text__boxes {
+		padding: 10px;
+		width: 100%;
+		font-size: 2rem;
+		resize: none;
+	}
+
+	.input {
+		font-size: 2rem;
+	}
+	.contact-form-span {
+		font-size: 1.5rem;
+		padding: 0.5rem;
+	}
+	.contact-form-error {
+		font-size: 2rem;
+	}
+	.contact__div__form__response {
+		font-size: 3rem;
+	}
+}
