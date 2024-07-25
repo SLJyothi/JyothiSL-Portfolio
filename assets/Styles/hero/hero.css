@@ -274,16 +274,4 @@
 		width: 100%;
 		position: 10px;
 	}
-	.Typing_container{
-		width: 80% ;
-		height: 70vh;
-		display: flex;
-		color: #fff;
-		align-items: center;
-		justify-content: center;
-	}
-        .h1_container{
-		font-size: 50px ;
-		font-weight: 600;
-	}
 }
