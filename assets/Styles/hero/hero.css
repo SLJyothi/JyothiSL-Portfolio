@@ -169,7 +169,13 @@
     padding: 0;
     margin-top: -3rem;
     text-align: center;
-
+}
+.hero__subtitulo1 {
+	padding-top: 10;
+	align-items: center;
+	width: 70rem;
+	filter: drop-shadow(0 0 12px var(--seccond-color));
+	transition: 0.2s ease-in-out;
 }
 .mexico-bandera {
 	width: 35px;
@@ -236,6 +242,9 @@
 	.hero__subtitulo {
 		font-size: 2rem;
 		font-weight: 400;
+	}
+	.hero__subtitulo1 {
+		width: 100rem;
 	}
 	.side__container {
 		display: flex;
