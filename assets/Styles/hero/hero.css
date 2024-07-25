@@ -21,7 +21,7 @@
 	font-family: "Montserrat", sans-serif;
 	transition: all 0.9s;
 	color: var(--seccond-color);
-	font-size: 6rem;
+	font-size: 10rem;
 	text-align: center;
 	font-weight: bold;
 	filter: drop-shadow(2 -1px 1px var(--pure-black));
