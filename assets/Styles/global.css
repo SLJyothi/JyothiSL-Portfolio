@@ -43,7 +43,7 @@ body {
   z-index: 0;
   font-family: 'Fira Code', monospace;
   margin: 0;
-  width: 130%;
+  width: 100%;
   background:var(--seccond-color);
 }
 
