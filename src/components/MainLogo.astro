@@ -1,0 +1,62 @@
+<a class="header__link " href="/">
+    <p class="header__logo logo__dark" id="logo">Jyothi<span class="span__dark" id="span">_SL</span></p>
+</a>
+<div class="side__container1">
+	<div class="side__profile1" id="profile-pic">
+		<img class="header__logo" src="./img/Jyothi SL.gif"
+	>
+	</div>
+
+<style>
+    .header__logo {
+	display: flex;
+	justify-content: flex-start;
+	font-weight: bold;
+	font-size: 3rem;
+	color: var(--seccond-color);
+	font-family: 'Montserrat', sans-serif;
+	transition: all 0.7s;
+	z-index: 4;
+}
+.side__container1 {
+	zoom: 88%;
+	height: 95%;
+	margin-left: 0%;
+}
+.header__logo,
+.header__link:hover {
+	cursor: pointer;
+}
+
+.header__logo span {
+	color: var(--blue);
+}
+
+.header__logo span:hover {
+	color: var(--blue);
+	filter: var(--glow-blue);
+	cursor: default;
+}
+@media screen and (min-width:768px) {
+    .header__logo {
+		display: flex;
+		justify-content: flex-start;
+		font-size: 2.2rem;
+	}
+	.side__container1 {
+	zoom: 80%;
+}
+	
+}
+@media screen and (min-width:1200px) {
+    .header__logo {
+		display: flex;
+		justify-content: flex-start;
+		font-size: 3.2rem;
+	}
+	.side__container1 {
+	zoom: 95%;
+}
+}
+
+</style>
