@@ -4,7 +4,7 @@ This is my first portfolio, built using HTML, CSS, and Javascript. I've used Jav
 
 Feel free to clone this repository and customize it to your liking.
 
-You can also check out the live repository [here](https://sljyothi.github.io/JyothiSL-Portfolio/).
+You can also check out the live repository [here](https://jyothi-sl.netlify.app/).
 
 Don't forget to give this repository a star ⭐ if you find it helpful.
 
@@ -14,7 +14,7 @@ This project is licensed under the MIT License.
 
 ---
 
-[Visit my website](https://sljyothi.github.io/JyothiSL-Portfolio/)
+[Visit my website](https://jyothi-sl.netlify.app/)
 
 ![image](assets/img/PortfolioImg/Jyothi_SL_Pro2.png)
 ![image](assets/img/PortfolioImg/Jyothi_SL_Pro4.png)
