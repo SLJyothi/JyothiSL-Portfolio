@@ -1,0 +1,120 @@
+@import "../../styles/base";
+.nav_bar {
+	position: absolute;
+	right: 5%;
+	transition: 0.3s ease-in;
+}
+
+.header.scrolled {
+	.nav_bar {
+		// bottom: 5px;
+	}
+}
+.nav_btns {
+	display: flex;
+	flex-direction: row;
+}
+.menu_icon {
+	display: none;
+}
+@include md {
+	.nav_btns {
+		display: flex;
+		flex-direction: column;
+		padding: 100px 0px 10px 15px;
+		position: absolute;
+		right: -200px;
+		top: 0px;
+		background-color: rgba(255, 255, 255, 0.162);
+		backdrop-filter: blur(5px);
+		border-radius: 10% 0 0 10%;
+		width: 180px;
+		height: 100vh;
+		transition: all 0.8s ease-in-out;
+		overflow: hidden;
+	}
+	.nav_bar {
+		all: unset;
+	}
+	.menu_icon {
+		display: inline-block;
+		position: absolute;
+		right: 5%;
+		top: 38%;
+		z-index: 1000;
+
+		&.close .btn-line:nth-child(1) {
+			transform: rotate(45deg) translate(4px, 5px);
+		}
+
+		&.close .btn-line:nth-child(2) {
+			opacity: 0;
+		}
+
+		&.close .btn-line:nth-child(3) {
+			transform: rotate(-45deg) translate(4px, -5px);
+		}
+
+		.btn-line {
+			width: 20px;
+			height: 1px;
+			margin: 0 0 5px 0;
+			background: $font-gray;
+			transition: all 0.5s ease-out;
+		}
+	}
+
+	.nav_btns.active {
+		right: 0px;
+	}
+}
+@include sm {
+	.nav_btns {
+		display: flex;
+		flex-direction: column;
+		padding: 60px 0px 10px 15px;
+		position: absolute;
+		right: -150px;
+		top: 0px;
+		background-color: $basic-pink;
+		border-radius: 15% 0 0 15%;
+		width: 120px;
+		height: 180px;
+		transition: all 0.8s ease-in-out;
+		overflow: hidden;
+	}
+	.nav_bar {
+		all: unset;
+	}
+	.menu_icon {
+		display: inline-block;
+		position: absolute;
+		right: 5%;
+		top: 38%;
+		z-index: 1000;
+
+		&.close .btn-line:nth-child(1) {
+			transform: rotate(45deg) translate(4px, 5px);
+		}
+
+		&.close .btn-line:nth-child(2) {
+			opacity: 0;
+		}
+
+		&.close .btn-line:nth-child(3) {
+			transform: rotate(-45deg) translate(4px, -5px);
+		}
+
+		.btn-line {
+			width: 20px;
+			height: 1px;
+			margin: 0 0 5px 0;
+			background: $font-gray;
+			transition: all 0.5s ease-out;
+		}
+	}
+
+	.nav_btns.active {
+		right: 0px;
+	}
+}

@@ -1,0 +1,13 @@
+@import "../../styles/base";
+.footer {
+	height: 400px;
+	width: 100%;
+
+	text-align: center;
+	&_title {
+		font-family: "DM Serif Display";
+		color: $font-gray;
+		font-size: 1.5rem;
+		margin: 0 auto;
+	}
+}

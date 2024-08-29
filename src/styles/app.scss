@@ -1,0 +1,19 @@
+@import "../styles/base";
+[data-scroll-container] {
+	perspective: 1px;
+}
+
+@include md {
+	.custom-cursor {
+		display: none;
+	}
+}
+
+@include sm {
+	[data-scroll-container] {
+		perspective: none;
+	}
+	.custom-cursor {
+		display: none;
+	}
+}

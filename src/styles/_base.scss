@@ -1,0 +1,29 @@
+// color variables
+$page-background: #fffefc;
+$basic-blue: #ecf9ff;
+$font-gray: #6c6c6c;
+$font-hover: #929292;
+$basic-pink: #fbf4f4;
+
+//fonts
+
+@font-face {
+	// This is parsed as a normal function call that takes a quoted string.
+	src: local("ChenYuluoyan"),
+		url("../assets/fonts/chenyuluoyan-thin-monospaced-webfont.woff")
+			format("woff");
+	font-family: "ChenYuluoyan";
+	font-weight: 400;
+}
+
+// RWD breakpoint setting
+@mixin md {
+	@media only screen and (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin sm {
+	@media only screen and (max-width: 600px) {
+		@content;
+	}
+}

@@ -1,0 +1,326 @@
+@import "../../../styles/base";
+@import "../../../styles/animation.scss";
+.desk {
+	position: absolute;
+	width: 100vw;
+	z-index: -1;
+}
+.about {
+	color: $font-gray;
+	padding-top: 20px;
+	height: min(100vh, 700px);
+	top: -20px;
+	position: relative;
+	z-index: 1;
+	&_content {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&_title {
+		position: absolute;
+		top: -100px;
+		.dots_white {
+			width: 250px;
+			position: absolute;
+			left: 0;
+		}
+
+		&_text {
+			padding-top: 80px;
+			padding-left: 5rem;
+			font-size: 3.8vw;
+			font-weight: 400;
+			font-family: "Caveat";
+			animation: fadeIn 2s;
+			z-index: 2;
+		}
+	}
+	.profile {
+		height: 15vw;
+		margin: 7vw 0 2vw;
+		border-radius: 50%;
+	}
+	&_education {
+		position: relative;
+		padding-left: 10%;
+		width: 25%;
+		&_textbox {
+			display: flex;
+			position: absolute;
+			left: 7vw;
+		}
+		&_title {
+			position: relative;
+			left: -20px;
+			top: -3vw;
+			font-family: "ChenYuluoyan", "Noto Serif TC", serif;
+			font-size: 3.3vw;
+			writing-mode: vertical-rl;
+			text-orientation: upright;
+		}
+
+		&_text {
+			font-family: "Noto Serif TC", serif;
+			font-weight: 600;
+			font-size: 1.3vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+			:first-child {
+				padding-top: 3vw;
+			}
+
+			> p.is-inview {
+				animation: none;
+			}
+
+			> p {
+				padding-bottom: 1vw;
+				position: inline-block;
+			}
+
+			&_master {
+				padding-bottom: 5px;
+				position: inline-flex;
+
+				> span {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	&_journey {
+		position: relative;
+		padding-left: 50px;
+		width: 50%;
+		font-family: "ChenYuluoyan";
+		font-size: 3.3vw;
+		&_wrap {
+			display: inline-flex;
+			vertical-align: middle;
+			margin-top: -60px;
+			.span {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@include md {
+	.desk {
+		position: absolute;
+		width: 100vw;
+		z-index: -1;
+	}
+	.about {
+		color: $font-gray;
+		padding-top: 20px;
+		height: auto;
+		height: min(100vh, 500px);
+		top: -20px;
+		position: relative;
+		z-index: 1;
+		&_content {
+			display: flex;
+			flex-direction: row;
+		}
+
+		&_title {
+			position: absolute;
+			top: -100px;
+			.dots_white {
+				display: none;
+			}
+
+			&_text {
+				padding-top: 80px;
+				padding-left: 5rem;
+				font-size: 3.8vw;
+				font-weight: 400;
+				font-family: "Caveat";
+				animation: fadeIn 2s;
+				z-index: 2;
+			}
+		}
+		.profile {
+			height: 15vw;
+			margin: 7vw 0 2vw;
+			border-radius: 50%;
+		}
+		&_education {
+			position: relative;
+			padding-left: 10%;
+			width: 25%;
+			&_textbox {
+				display: flex;
+				position: absolute;
+				left: 7vw;
+			}
+			&_title {
+				position: relative;
+				left: -20px;
+				top: -3vw;
+				font-family: "ChenYuluoyan", "Noto Serif TC", serif;
+				font-size: 3.3vw;
+				writing-mode: vertical-rl;
+				text-orientation: upright;
+			}
+
+			&_text {
+				font-family: "Noto Serif TC", serif;
+				font-weight: 600;
+				font-size: 1.3vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+
+				:first-child {
+					padding-top: 3vw;
+				}
+
+				> p.is-inview {
+					animation: none;
+				}
+
+				> p {
+					padding-bottom: 1vw;
+					position: inline-block;
+				}
+
+				&_master {
+					padding-bottom: 5px;
+					position: inline-flex;
+
+					> span {
+						display: inline-block;
+					}
+				}
+			}
+		}
+		&_journey {
+			position: relative;
+			padding-left: 50px;
+			width: 50%;
+			font-family: "ChenYuluoyan";
+			font-size: 3.3vw;
+			&_wrap {
+				display: inline-flex;
+				vertical-align: middle;
+				margin-top: -60px;
+				.span {
+					display: inline-block;
+				}
+			}
+		}
+	}
+}
+
+@include sm {
+	.desk {
+		position: absolute;
+		bottom: -30px;
+	}
+	.about {
+		background-color: #fbf4f4;
+		height: auto;
+
+		&_title {
+			position: static;
+			.dots_white {
+				display: none;
+			}
+
+			&_text {
+				padding-top: 0px;
+				padding-left: 2rem;
+				font-size: 3rem;
+				font-weight: 400;
+				font-family: "Caveat";
+				animation: none;
+				z-index: 2;
+				opacity: 0;
+
+				&.is-inview {
+					opacity: 1;
+					transition: all 0.5s ease 0.2s;
+				}
+			}
+		}
+
+		&_content {
+			opacity: 0;
+			flex-direction: column;
+			align-items: center;
+
+			&.is-inview {
+				opacity: 1;
+				transition: all 0.5s ease;
+			}
+		}
+
+		.profile {
+			height: 200px;
+			margin: 50px 0;
+			border-radius: 50%;
+		}
+
+		&_education {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: static;
+			padding-left: 0;
+			width: 100%;
+
+			&_textbox {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				position: static;
+			}
+
+			&_title {
+				position: relative;
+				left: 0px;
+				top: 0;
+				font-size: 2.5rem;
+				writing-mode: horizontal-tb;
+			}
+
+			&_text {
+				text-align: center;
+				font-family: "Noto Serif TC", serif;
+				font-weight: 500;
+				font-size: 1.2rem;
+
+				:first-child {
+					padding-top: 10px;
+				}
+
+				> p {
+					padding-bottom: 10px;
+				}
+
+				&_master {
+					padding-bottom: 5px;
+					position: inline-flex;
+				}
+			}
+		}
+		&_journey {
+			margin-top: 40px;
+			text-align: center;
+			position: relative;
+			padding-left: 0;
+			width: 100%;
+			font-size: 2.5rem;
+			&_wrap {
+				display: inline-flex;
+				vertical-align: middle;
+				margin-top: 0px;
+			}
+		}
+	}
+}

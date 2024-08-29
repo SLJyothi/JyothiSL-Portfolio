@@ -1,0 +1,188 @@
+@import "../../../styles/base";
+.project_item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 550px;
+
+	&.reverse {
+		flex-direction: row-reverse;
+	}
+	.toy {
+		position: absolute;
+		width: 200px;
+		height: auto;
+		left: 80px;
+		bottom: 150px;
+	}
+
+	.project_image {
+		border-radius: 50%;
+
+		img {
+			clip-path: inset(100% 0% 0% 0%);
+			transition: clip-path 800ms cubic-bezier(0.77, 0, 0.175, 1);
+			border-radius: 5%;
+			width: 100%;
+
+			&.is-inview {
+				clip-path: inset(0% 0% 0% 0%);
+			}
+		}
+	}
+
+	.project_title {
+		position: relative;
+		padding-bottom: 1vw;
+		font-size: 2.8vw;
+		font-family: "ChenYuluoyan";
+
+		&:hover {
+			color: $font-hover;
+		}
+	}
+
+	.project_text {
+		font-size: 1.2vw;
+		font-family: "Noto Serif TC", serif;
+		line-height: 1.6em;
+		white-space: pre-line;
+	}
+
+	.project_textbox {
+		width: 32%;
+		padding: 0 5vw;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
+.portfolio {
+	padding: 100px 0 150px;
+}
+
+.mll {
+	padding: 20px 0 160px;
+}
+
+.furbo {
+	padding: 20px 0 150px;
+}
+
+@include md {
+	.project_item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 400px;
+
+		&.reverse {
+			flex-direction: row-reverse;
+		}
+		.toy {
+			display: none;
+		}
+
+		.project_title {
+			position: relative;
+			padding-bottom: 1vw;
+			font-size: 2.8vw;
+			font-family: "ChenYuluoyan";
+
+			&:hover {
+				color: $font-hover;
+			}
+		}
+
+		.project_text {
+			font-size: 1.2vw;
+			font-family: "Noto Serif TC", serif;
+			line-height: 1.6em;
+		}
+
+		.project_textbox {
+			width: 32%;
+			padding: 0 5vw;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	.portfolio {
+		padding: 0px 0 0px;
+	}
+
+	.mll {
+		padding: 0px 0 00px;
+	}
+
+	.furbo {
+		padding: 0px 0 0px;
+	}
+}
+@include sm {
+	.project_item {
+		flex-direction: column;
+		height: 500px !important;
+		width: 100%;
+		padding: 0;
+		text-align: left;
+		justify-content: flex-start;
+		opacity: 0;
+
+		&.is-inview {
+			opacity: 1;
+			transition: all 0.5s ease-in-out;
+		}
+
+		.toy {
+			display: none;
+		}
+		.project_image {
+			width: 300px !important ;
+			height: 200px !important;
+			object-fit: cover;
+			overflow: hidden;
+			border-radius: 0%;
+			img {
+				clip-path: inset(0% 0% 0% 0%);
+			}
+		}
+
+		.project_title {
+			position: relative;
+			padding-bottom: 0;
+			font-size: 2.3rem;
+		}
+
+		.project_text {
+			font-size: 1rem;
+			font-family: "Noto Serif TC", serif;
+			> br {
+				display: none;
+			}
+		}
+
+		.project_textbox {
+			width: 90%;
+			padding: 20px 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	.portfolio {
+		padding: 0px;
+	}
+
+	.mll {
+		padding: 0px;
+	}
+
+	.furbo {
+		padding: 0px;
+	}
+}

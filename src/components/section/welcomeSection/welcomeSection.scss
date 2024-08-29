@@ -1,0 +1,233 @@
+@import "../../../styles/base";
+@import "../../../styles/animation.scss";
+.blueblob {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 8em;
+	z-index: -1;
+	animation: jumpInTopLeft 800ms;
+}
+.deskbg {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	z-index: -2;
+	animation: jumpInBottom 800ms;
+}
+
+.deskft {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	animation: jumpInBottom 850ms;
+}
+
+.dots {
+	position: absolute;
+	padding-bottom: -20px;
+	left: -10%;
+	top: -10%;
+	width: 100px;
+	z-index: -1;
+	animation: fadeIn 2s;
+}
+.welcome {
+	padding-top: 2rem;
+	height: min(100vh, 1200px);
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	&_text_br {
+		display: none;
+	}
+
+	&_text_section {
+		padding-right: 250px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin-top: -2rem;
+		width: 40%;
+		height: 50%;
+	}
+
+	&_text_hello {
+		position: relative;
+		padding-bottom: 1.2rem;
+		left: -20px;
+		font-family: "caveat";
+		font-size: 4vw;
+		color: $font-gray;
+		font-weight: 500;
+		@include moveInDelay("700ms", "moveInTop", "1s");
+	}
+
+	&_text_intro {
+		font-family: "ChenYuluoyan", serif;
+		font-size: 1.8vw;
+		color: $font-gray;
+		font-weight: 400;
+		width: 40vw;
+		@include moveInDelay("1s", "moveInTop", "1s");
+	}
+
+	&_image {
+		position: absolute;
+		height: 25vw;
+		// width: 30vw;
+		right: 12vw;
+		bottom: 15vw;
+		background-color: transparent;
+		animation: moveInRight 1s;
+	}
+
+	.cafe {
+		width: 6vw;
+		height: auto;
+		position: absolute;
+		right: 5vw;
+		bottom: 10vw;
+		z-index: 2;
+	}
+
+	img {
+		height: 100%;
+		@include moveInDelay("400ms", "moveInRight", "1s");
+	}
+}
+
+@include md {
+	.welcome {
+		height: 600px;
+		position: relative;
+
+		.dots {
+			position: absolute;
+			padding-bottom: 0;
+			left: 20%;
+			top: -10%;
+		}
+
+		.deskbg {
+			position: absolute;
+			bottom: 0px;
+			z-index: -2;
+			animation: none;
+		}
+		.deskft {
+			position: absolute;
+			bottom: -10px;
+			z-index: -1;
+			animation: none;
+		}
+		&_text_section {
+			display: flex;
+			flex-direction: column;
+			padding: 0rem;
+			width: 100%;
+			height: auto;
+			align-items: center;
+		}
+		&_text_hello {
+			padding-bottom: 1rem;
+			font-family: "caveat";
+			font-size: 3.2rem;
+			color: $font-gray;
+			font-weight: 500;
+			animation: moveInTop 1s;
+		}
+
+		&_text_intro {
+			font-size: 1.5rem;
+			width: 500px;
+		}
+		&_image {
+			right: 100px;
+			bottom: 50px;
+			animation: moveInTop 1s;
+			position: absolute;
+		}
+
+		.cafe {
+			right: 80px;
+			bottom: 50px;
+			animation: moveInTop 1s;
+			position: absolute;
+		}
+
+		img {
+			height: 100%;
+			animation: moveInTop 1s;
+		}
+	}
+}
+
+@include sm {
+	.blueblob {
+		animation: moveInTop 800ms;
+	}
+	.deskbg {
+		bottom: 0px;
+		z-index: -2;
+	}
+
+	.deskft {
+		bottom: -10px;
+		z-index: -1;
+	}
+	.welcome {
+		padding-top: 7rem;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		position: relative;
+		height: auto;
+
+		&_text_section {
+			display: flex;
+			flex-direction: column;
+			padding: 3rem 0 5rem;
+			width: 75%;
+			height: auto;
+			align-items: center;
+			justify-content: center;
+		}
+		&_text_br {
+			display: inline;
+		}
+		&_text_intro {
+			text-align: center;
+			font-size: 25px;
+			animation: moveInTop 1s;
+			width: 100%;
+		}
+
+		&_text_hello {
+			left: 0px;
+			padding-bottom: 1rem;
+			font-size: 40px;
+			font-weight: 500;
+			animation: moveInTop 1s;
+		}
+		&_image {
+			position: relative;
+			right: 10px;
+			bottom: 20px;
+			height: 220px;
+			width: 220px;
+			animation: moveInTop 1s;
+		}
+
+		.cafe {
+			display: none;
+		}
+
+		img {
+			height: 100%;
+			animation: moveInTop 1s;
+		}
+	}
+}

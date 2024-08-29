@@ -1,0 +1,152 @@
+//animations
+@keyframes moveInLeft {
+	0% {
+		/*Here we start*/
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	100% {
+		/*Here we finished*/
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInRight {
+	0% {
+		/*Here we start*/
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		/*Here we finished*/
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moveInTop {
+	0% {
+		/*Here we start*/
+		opacity: 0;
+		transform: translateY(-75px);
+	}
+
+	100% {
+		/*Here we finished*/
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+@keyframes moveInBottom {
+	0% {
+		/*Here we start*/
+		opacity: 0;
+		transform: translateY(75px);
+	}
+
+	100% {
+		/*Here we finished*/
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+@keyframes fadeIn {
+	0% {
+		/*Here we start*/
+		opacity: 0;
+	}
+
+	100% {
+		/*Here we finished*/
+		opacity: 1;
+	}
+}
+
+@keyframes click {
+	0% {
+		/*Here we start*/
+		transform: translate(0);
+	}
+
+	50% {
+		transform: translate(-7px, 7px);
+	}
+
+	100% {
+		/*Here we finished*/
+		transform: translate(0);
+	}
+}
+
+@keyframes clickup {
+	0% {
+		/*Here we start*/
+		transform: translate(0);
+	}
+
+	50% {
+		transform: translate(-7px, -7px);
+	}
+
+	100% {
+		/*Here we finished*/
+		transform: translate(0);
+	}
+}
+
+@keyframes jumpInTopLeft {
+	0% {
+		/*Here we start*/
+		transform: translate(-150px, -200px);
+		rotate: 20deg;
+	}
+
+	// 75% {
+	// 	transform: translate(5px, 5px);
+	// }
+
+	100% {
+		/*Here we finished*/
+		transform: translate(0);
+	}
+}
+
+@keyframes jumpInBottom {
+	0% {
+		/*Here we start*/
+		transform: translate(0px, 200px);
+	}
+
+	// 75% {
+	// 	transform: translate(5px, 5px);
+	// }
+
+	100% {
+		/*Here we finished*/
+		transform: translate(0);
+	}
+}
+
+@keyframes wait {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@mixin moveInDelay($waitTime, $animationtype, $delayTime) {
+	animation: wait #{$waitTime}, #{$animationtype} #{$delayTime} #{$waitTime};
+}

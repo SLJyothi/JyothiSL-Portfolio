@@ -1,0 +1,101 @@
+@import "../../styles/base";
+@import "../../styles/animation.scss";
+.header {
+	width: 100vw;
+	height: 4em;
+	padding: 10px;
+	background-color: transparent;
+	position: fixed;
+	z-index: 999;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	animation: moveInTop 650ms;
+	transition: 0.3s ease-in;
+
+	&.scrolled {
+		padding-top: 1em;
+		backdrop-filter: blur(3px);
+		height: 1em;
+
+		.header_name {
+			transition: 0.3s ease-in;
+			font-size: 1.3rem;
+		}
+	}
+
+	&_name {
+		font-family: "DM Serif Display";
+		color: $font-gray;
+		font-weight: 600;
+		font-size: 1.5rem;
+		letter-spacing: 1px;
+		transition: 0.3s ease-in;
+	}
+
+	&-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			cursor: pointer;
+
+			h1 {
+				display: inline-block;
+				margin-bottom: 0px;
+				font-weight: 600;
+			}
+
+			img {
+				width: 16px;
+				margin-left: 6px;
+				padding-bottom: 6px;
+			}
+		}
+	}
+
+	@include md {
+		position: fixed;
+		&_name {
+			font-size: 1.4em;
+			letter-spacing: 1px;
+			padding-left: 1.5em;
+		}
+
+		&.scrolled {
+			height: 1em;
+
+			transition: all 0.5s ease;
+
+			.header_name {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	@include sm {
+		padding: 12px 0;
+		justify-content: flex-start;
+		height: 2rem;
+		top: 0;
+
+		&_name {
+			font-size: 1.4em;
+			letter-spacing: 1px;
+			padding-left: 1.5em;
+		}
+
+		&.scrolled {
+			height: 1em;
+			// background-color: #fffefcb3;
+			backdrop-filter: blur(5px);
+			transition: all 0.5s ease;
+
+			.header_name {
+				font-size: 1.4rem;
+			}
+		}
+	}
+}

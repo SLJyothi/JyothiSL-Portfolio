@@ -1,0 +1,58 @@
+@import "../../../styles/base";
+.nav_btn {
+	padding: 1em 1em 0px;
+	font-family: "DM Serif Display";
+	font-size: 1rem;
+	font-weight: 400;
+	color: $font-gray;
+	transition: 0.3s ease-in;
+
+	&:hover {
+		color: $font-hover;
+	}
+	&::after {
+		content: "";
+		display: block;
+		margin-top: 3px;
+		width: 0;
+		height: 1px;
+		background: #c1c1c196;
+		transition: width 0.3s;
+	}
+	&:hover::after {
+		border-bottom: 1px;
+		width: 100%;
+	}
+}
+
+.header.scrolled {
+	.nav_btn {
+		font-size: 0.9rem;
+		transition: 0.3s ease-in;
+	}
+}
+
+@include md {
+	.nav_btn {
+		font-size: 1rem;
+	}
+
+	.header.scrolled {
+		.nav_btn {
+			font-size: 1rem;
+		}
+	}
+}
+
+@include sm {
+	.nav_btn {
+		font-size: 1rem;
+		padding: 8px;
+	}
+
+	.header.scrolled {
+		.nav_btn {
+			font-size: 1rem;
+		}
+	}
+}

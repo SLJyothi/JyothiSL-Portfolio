@@ -1,0 +1,190 @@
+@import "../../../styles/base";
+@import "../../../styles/animation.scss";
+.skill {
+	margin-top: min(10vh, 300px);
+	margin-bottom: min(5vh, 300px);
+	// margin: 10vh 0 5vh;
+	height: min(100vh, 700px);
+	text-align: center;
+
+	&_bg {
+		position: absolute;
+		overflow: hidden;
+		right: -10vw;
+		top: 10vw;
+		height: 40vw;
+		z-index: -1;
+	}
+}
+
+.skill_section_title {
+	color: $font-gray;
+	font-family: "Caveat";
+	font-size: 6vw;
+	position: relative;
+	margin-left: 5vw;
+	margin-bottom: -15vw;
+	opacity: 0.5;
+	writing-mode: vertical-rl;
+}
+
+.skill_items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-left: 100px;
+
+	&.is-inview {
+		.skill_item:first-child {
+			@include moveInDelay("200ms", "moveInBottom", "1s");
+		}
+		.skill_item:nth-child(2) {
+			@include moveInDelay("1000ms", "moveInBottom", "1s");
+		}
+		.skill_item:nth-child(3) {
+			@include moveInDelay("600ms", "moveInBottom", "1s");
+		}
+		.skill_item:last-child {
+			@include moveInDelay("1400ms", "moveInBottom", "1s");
+		}
+	}
+
+	.skill_item:nth-child(2) {
+		position: relative;
+		left: -15vw;
+	}
+
+	.skill_item:nth-child(3) {
+		padding-left: 18vw;
+	}
+	.skill_item:nth-child(4) {
+		position: relative;
+		left: -8vw;
+	}
+}
+@include md {
+	.skill {
+		margin-top: 0;
+		margin-bottom: 0;
+		height: min(100vh, 600px);
+		text-align: center;
+		position: relative;
+
+		&_bg {
+			position: absolute;
+			overflow: hidden;
+			right: -150px;
+			top: 100px;
+			height: 500px;
+			z-index: -1;
+		}
+	}
+
+	.skill_section_title {
+		color: $font-gray;
+		font-family: "Caveat";
+		font-size: 6vw;
+		position: relative;
+		margin-left: 5vw;
+		margin-bottom: -15vw;
+		opacity: 0.5;
+		writing-mode: vertical-rl;
+	}
+
+	.skill_items {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		margin-left: 100px;
+
+		&.is-inview {
+			.skill_item:first-child {
+				@include moveInDelay("200ms", "moveInBottom", "1s");
+			}
+			.skill_item:nth-child(2) {
+				@include moveInDelay("1000ms", "moveInBottom", "1s");
+			}
+			.skill_item:nth-child(3) {
+				@include moveInDelay("600ms", "moveInBottom", "1s");
+			}
+			.skill_item:last-child {
+				@include moveInDelay("1400ms", "moveInBottom", "1s");
+			}
+		}
+
+		.skill_item:nth-child(2) {
+			position: relative;
+			left: -15vw;
+		}
+
+		.skill_item:nth-child(3) {
+			padding-left: 18vw;
+		}
+		.skill_item:nth-child(4) {
+			position: relative;
+			left: -8vw;
+		}
+	}
+}
+@include sm {
+	.skill {
+		margin-top: 50px;
+		margin-bottom: 20px;
+		height: auto;
+		text-align: center;
+		position: relative;
+
+		&_bg {
+			position: absolute;
+			overflow: hidden;
+			right: -150px;
+			top: 250px;
+			height: 500px;
+			z-index: -1;
+		}
+	}
+
+	.skill_section_title {
+		font-size: 3rem;
+		margin-left: -120px;
+		margin-bottom: 0;
+		opacity: 1;
+		writing-mode: horizontal-tb;
+	}
+
+	.skill_items {
+		flex-direction: column;
+		align-items: center;
+		margin-left: 0px;
+
+		&.is-inview {
+			.skill_item:first-child {
+				@include moveInDelay("200ms", "moveInRight", "1s");
+			}
+			.skill_item:nth-child(2) {
+				@include moveInDelay("400ms", "moveInRight", "1s");
+			}
+			.skill_item:nth-child(3) {
+				@include moveInDelay("600ms", "moveInRight", "1s");
+			}
+			.skill_item:last-child {
+				@include moveInDelay("800ms", "moveInRight", "1s");
+			}
+		}
+		.skill_item:nth-child(2) {
+			position: relative;
+			left: 0;
+		}
+
+		.skill_item:nth-child(3) {
+			padding-left: 0;
+		}
+		.skill_item:nth-child(4) {
+			position: relative;
+			left: 0;
+			padding-bottom: 40px;
+		}
+	}
+}

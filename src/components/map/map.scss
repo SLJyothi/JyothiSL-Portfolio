@@ -1,0 +1,69 @@
+@import "../../styles/base";
+@import "../../styles/animation.scss";
+.map {
+	&_pencil {
+		width: 40px;
+		height: auto;
+		position: absolute;
+
+		z-index: 3;
+
+		& > img {
+			height: 100%;
+			width: 100%;
+			transform: translate(10%, -50%);
+		}
+	}
+	.path {
+		position: absolute;
+		left: 0;
+	}
+	.path_mobile {
+		display: none;
+	}
+
+	&_info {
+		display: none;
+		position: absolute;
+		transition: 0.3s ease-in;
+
+		&.animation {
+			display: block;
+			transition: 0.3s ease-in;
+			.map_pin:first-child {
+				@include moveInDelay("300ms", "fadeIn", "500ms");
+			}
+			.map_pin:nth-child(2) {
+				@include moveInDelay("600ms", "fadeIn", "500ms");
+			}
+			.map_pin:nth-child(3) {
+				@include moveInDelay("900ms", "fadeIn", "500ms");
+			}
+			.map_pin:nth-child(4) {
+				@include moveInDelay("1200ms", "fadeIn", "500ms");
+			}
+			.map_pin:nth-child(5) {
+				@include moveInDelay("1500ms", "fadeIn", "500ms");
+			}
+			.map_pin:last-child {
+				@include moveInDelay("1800ms", "fadeIn", "500ms");
+			}
+		}
+	}
+}
+
+@include sm {
+	.map {
+		.path {
+			display: none;
+		}
+
+		.path_mobile {
+			display: block;
+			height: 600px;
+			margin-left: 50px;
+			margin-top: 20px;
+			margin-bottom: 50px;
+		}
+	}
+}

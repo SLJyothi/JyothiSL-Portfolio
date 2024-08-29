@@ -1,0 +1,102 @@
+@import "../../../styles/base";
+.project {
+	height: auto;
+	width: 100%;
+	font-family: "Caveat";
+	font-size: 4rem;
+	color: $font-gray;
+	padding-bottom: 200px;
+	padding-top: 5vw;
+	// position: relative;
+
+	&_spinner {
+		width: 120px;
+		position: absolute;
+		right: 0px;
+		top: 120px;
+	}
+
+	&_dots {
+		height: 150px;
+		position: absolute;
+		right: 50px;
+		z-index: -3;
+	}
+
+	&_title_wrapper {
+		padding-top: 1em;
+		padding-bottom: -1;
+		position: relative;
+	}
+
+	&_section_title {
+		position: absolute;
+		padding: 20px, 0, 30px;
+		right: 100px;
+		z-index: 2;
+	}
+
+	.project_items {
+		z-index: -3;
+	}
+}
+
+@include md {
+	.project {
+		height: auto;
+		padding-bottom: 200px;
+		padding-top: 0;
+		// position: relative;
+
+		&_spinner {
+			display: none;
+		}
+
+		&_dots {
+			height: 150px;
+			position: absolute;
+			right: 50px;
+			z-index: -3;
+		}
+
+		&_title_wrapper {
+			padding-top: 0;
+			padding-bottom: 0;
+			position: relative;
+		}
+
+		&_section_title {
+			position: absolute;
+			padding: 20px, 0, 30px;
+			right: 100px;
+			z-index: 2;
+		}
+
+		.project_items {
+			z-index: -3;
+		}
+	}
+}
+@include sm {
+	.project {
+		width: 100%;
+		padding-bottom: 50px;
+		padding-top: 0px;
+		height: auto;
+
+		&_dots {
+			height: 120px;
+			position: absolute;
+			left: 0px;
+			z-index: -1;
+		}
+
+		&_section_title {
+			position: relative;
+			font-size: 3.5rem;
+			padding: 10px 0 30px;
+			left: 50px;
+			z-index: 2;
+		}
+	}
+}

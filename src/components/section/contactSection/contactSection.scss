@@ -1,0 +1,172 @@
+@import "../../../styles/base";
+@import "../../../styles/animation.scss";
+.contact {
+	font-family: "DM Serif Display";
+	color: $font-gray;
+	height: 400px;
+	background-color: #fbf4f4;
+	position: relative;
+
+	&_title_wrapper {
+		border-radius: 50%;
+		height: 400px;
+		width: 400px;
+		transform: translate(50%, 50%);
+		position: absolute;
+		left: 8%;
+		top: -150px;
+	}
+
+	&_title_mobile {
+		display: none;
+	}
+	&_svg {
+		height: 80px;
+		top: 10px;
+	}
+
+	&_context {
+		opacity: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 1.5s ease;
+		&.is-inview {
+			opacity: 1;
+		}
+	}
+
+	&_bg {
+		z-index: -1;
+		position: fixed;
+		bottom: 380px;
+		width: 100vw;
+		height: auto;
+	}
+
+	&_list {
+		width: 30%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+	}
+
+	.resume_download {
+		font-family: "ChenYuLuoyan";
+		font-size: 3rem;
+		transition: opacity 0.5s ease;
+
+		& > img {
+			height: auto;
+			width: 40px;
+			position: relative;
+			top: 30px;
+			left: 20px;
+			animation: clickup 1s infinite ease-in;
+		}
+
+		&:hover {
+			opacity: 0.7;
+			// color: #b5b5b5;
+		}
+	}
+}
+
+@include md {
+	.contact {
+		font-family: "DM Serif Display";
+		color: $font-gray;
+		height: 300px;
+		background-color: #fbf4f4;
+
+		&_title_wrapper {
+			display: block;
+			text-align: center;
+			height: 60px;
+			transform: translate(0%, 0%);
+			position: static;
+			margin: auto;
+		}
+
+		&_svg {
+			display: none;
+		}
+		&_title_mobile {
+			display: block;
+			position: relative;
+			top: -30px;
+			font-family: "Caveat";
+			font-size: 3rem;
+		}
+
+		&_context {
+			opacity: 0;
+			display: flex;
+			align-items: center;
+			transition: all 1.5s ease;
+			&.is-inview {
+				opacity: 1;
+			}
+		}
+
+		&_bg {
+			position: absolute;
+			bottom: 250px;
+		}
+
+		&_list {
+			width: 40%;
+		}
+	}
+}
+
+@include sm {
+	.contact {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		bottom: 0px;
+		height: 400px;
+
+		&_bg {
+			position: absolute;
+			bottom: 400px;
+		}
+
+		&_list {
+			width: 100%;
+			margin: 10%;
+			margin-left: 15%;
+		}
+
+		&_title_wrapper {
+			text-align: center;
+			height: 60px;
+			transform: translate(0%, 0%);
+			position: absolute;
+			left: 0;
+			top: 0px;
+		}
+
+		&_svg {
+			display: none;
+		}
+		&_title_mobile {
+			display: block;
+			font-family: "Caveat";
+			font-size: 3rem;
+			position: relative;
+			left: -10px;
+			top: 0px;
+		}
+
+		&_context {
+			flex-direction: column;
+		}
+		.resume_download {
+			font-size: 2.5rem;
+		}
+	}
+}
