@@ -1,0 +1,79 @@
+/*-------------------------
+Home Section
+----------------------------*/
+.home-section {
+
+    &.active {
+        @include flex(unset, center, row);
+    }
+
+    .container {
+        @include flex(space-between, center, row);
+
+        @include breakpoints(md) {
+            flex-direction: column-reverse;
+        }
+
+        .home-text {
+            text-transform: capitalize;
+
+            @include breakpoints(md) {
+                text-align: center;
+                margin-block-start: 2rem;
+            }
+
+            p {
+                @include font(300, 1.125rem, $blue-dark)
+            }
+
+            h1 {
+                @include font(600, 3.125rem, $blue-dark);
+
+                @include breakpoints(xs) {
+                    font-size: 1.875rem
+                }
+            }
+
+            h2 {
+                @include font(300, 1.25rem, $blue-dark);
+                margin-block-end: 2rem;
+
+                @include breakpoints(xs) {
+                    font-size: 1.125rem
+                }
+            }
+
+            .btn {
+                margin: 0 1rem 1rem 0;
+
+                @include breakpoints(md) {
+                    margin: 0 7px 15px;
+                }
+
+                @include breakpoints(xs) {
+                    min-inline-size: 11rem;
+                }
+            }
+        }
+
+        .home-image {
+            @include breakpoints(md) {
+                max-inline-size: 21.875rem;
+            }
+
+            .img-box {
+                background-color: $white-alpha-25;
+                border-radius: 50%;
+                border: 8px solid $white-alpha-25;
+                max-inline-size: 22.5rem;
+                margin: auto;
+
+                img {
+                    max-inline-size: 100%;
+                    object-fit: contain;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

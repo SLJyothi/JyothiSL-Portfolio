@@ -1,0 +1,213 @@
+/*-------------------------
+Portfolio Section
+----------------------------*/
+.portfolio-section {
+    padding-block-end: 50px;
+
+    .filters {
+        margin-block-end: 1rem;
+
+        ul {
+            @include flex(center, center, row);
+
+            li {
+                @include font(400, 1rem, $main-color);
+                text-transform: capitalize;
+                position: relative;
+                cursor: pointer;
+
+                &:not(:last-of-type) {
+                    margin-inline-end: 1.5rem;
+                }
+
+                @include breakpoints(md) {
+                    font-size: .8rem;
+                    text-align: center;
+                }
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    @include size(0%, 1px);
+                    inset-block-end: -2px;
+                    inset-inline: 0;
+                    background-color: $main-color;
+                    transition: inline-size .3s ease;
+                }
+
+                &:hover,
+                &.active {
+                    &::after {
+                        inline-size: 100%;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+
+    .portfolio-item {
+        margin: 15px 0;
+
+        @include breakpoints(sm) {
+            text-align: center;
+            margin-block-end: 2rem;
+        }
+
+        .portfolio-item-thumbnail {
+            display: block;
+            padding: 10px;
+            background-color: $white-alpha-25;
+            border: 1px solid $white-alpha-40;
+            border-radius: 10px;
+
+            img {
+                max-inline-size: 100%;
+                block-size: 12rem;
+                inline-size: 100%;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+        }
+
+        .portfolio-item-title {
+            @include font(500, 1.25rem, $blue-dark);
+            text-transform: capitalize;
+            margin: 20px 0;
+
+            @include breakpoints(xs) {
+                font-size: 1rem;
+            }
+        }
+
+        .portfolio-item-details {
+            display: none;
+        }
+    }
+}
+
+/*-------------------------
+Portfolio popup
+----------------------------*/
+.portfolio-popup {
+    position: fixed;
+    @include size(100%, 100%);
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    z-index: 200;
+    overflow-y: auto;
+    visibility: hidden;
+
+    &.open {
+        visibility: visible;
+        overflow-y: auto;
+
+        .pp-content {
+            opacity: 1;
+            transform: scale(1);
+            transition: all .5s ease;
+        }
+    }
+
+    .pp-inner {
+        min-block-size: 100vh;
+        padding: 40px 15px;
+        @include flex(center, center, column);
+
+        @include breakpoints(sm) {
+            padding: 30px 15px;
+        }
+
+        .pp-content {
+            max-inline-size: 900px;
+            inline-size: 100%;
+            background-color: $white-alpha-25;
+            border: 1px solid $white-alpha-40;
+            backdrop-filter: $backdrop-filter-blur;
+            border-radius: 30px;
+            padding: 30px;
+            transform: scale(.9);
+
+            .pp-header {
+                position: relative;
+
+                .pp-close {
+                    @include size(40px, 40px);
+                    padding: 0;
+                    @include flex(center, center, row);
+                    position: absolute;
+                    inset-inline-end: -40px;
+                    inset-block-start: -40px;
+
+                    img {
+                        max-inline-size: 100%;
+                        object-fit: contain;
+                        filter: invert(26%) sepia(49%) saturate(3242%) hue-rotate(318deg) brightness(94%) contrast(91%);
+                    }
+
+                    &:hover {
+                        img {
+                            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+                        }
+                    }
+                }
+
+                .pp-thumbnail {
+                    img {
+                        border-radius: 10px;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                    margin: 20px 0 15px;
+
+                    @include breakpoints(xs) {
+                        font-size: 1.25rem
+                    }
+                }
+            }
+
+            .pp-body {
+                .description {
+                    margin-block-end: 20px;
+
+                    p {
+                        line-height: 1.8;
+
+                        @include breakpoints(xs) {
+                            font-size: .9rem
+                        }
+                    }
+                }
+
+                .general-info {
+                    ul {
+                        li {
+                            margin-block-end: 10px;
+                            text-transform: capitalize;
+                            font-weight: 500;
+
+                            @include breakpoints(xs) {
+                                font-size: .9rem
+                            }
+
+                            span {
+                                font-weight: 300;
+
+                                a {
+                                    text-transform: capitalize;
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

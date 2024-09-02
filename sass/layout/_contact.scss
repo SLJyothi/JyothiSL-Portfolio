@@ -1,0 +1,150 @@
+/*-------------------------
+Contact Section
+----------------------------*/
+.contact-section {
+    .contact-form {
+        padding: 0 15px;
+
+        @include breakpoints(md) {
+            order: 2;
+        }
+
+        .input-group {
+            inline-size: 100%;
+            margin-block-end: 30px;
+
+            .form-control {
+                display: block;
+                padding: 0 20px;
+                @include size(100%, 3.125rem);
+                border-radius: 25px;
+                border: 1px solid transparent;
+                font-family: inherit;
+                @include font(400, 1rem, $blue-dark);
+                background-color: $white-alpha-25;
+                box-shadow: none;
+                transition: border-color .3s ease;
+
+                @include breakpoints(xs) {
+                    font-size: .8rem
+                }
+
+                &::placeholder {
+                    @include font(300, 1rem, $blue-dark);
+                    opacity: 0.8;
+                    text-transform: capitalize;
+
+                    @include breakpoints(xs) {
+                        font-size: .8rem
+                    }
+                }
+
+                &:focus {
+                    border-color: $white-alpha-40;
+                }
+            }
+
+            textarea.form-control {
+                block-size: 120px;
+                padding-block-start: 15px;
+                resize: none;
+            }
+
+            .invalid-feedback {
+                margin-inline-start: 1rem;
+                margin-block-start: 0.5rem;
+
+                @include breakpoints(md) {
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+
+    .message-sent {
+        background-color: $white-alpha-25;
+        border: 1px solid $white-alpha-40;
+        border-radius: 25px;
+        padding: 2rem;
+        block-size: auto;
+        text-align: center;
+        display: none;
+
+        .envelope-img {
+            max-block-size: 16rem;
+            margin-block-end: 1rem;
+
+            img {
+                max-inline-size: 100%;
+                object-fit: cover;
+                max-block-size: 16rem;
+            }
+        }
+    }
+
+    .contact-info {
+        padding: 0 0.9375rem;
+
+        @include breakpoints(md) {
+            order: 1;
+            margin-block-end: 0.9375rem;
+            padding: 0;
+        }
+
+        .contact-info-item {
+            margin: 0 0 30px;
+            padding: 0 0 0 20px;
+
+            h3 {
+                @include font(500, 1.25rem, $blue-dark);
+                text-transform: capitalize;
+                margin: 0 0 5px;
+
+                @include breakpoints(xs) {
+                    font-size: 1.125rem
+                }
+            }
+
+            a {
+                @include font(300, 1rem, $blue-dark);
+                transition: color .3s ease;
+
+                &:hover {
+                    color: $main-color
+                }
+            }
+
+            .social-links {
+                @include flex(flex-start, center, row);
+
+                a {
+                    @include flex(center, center, row);
+                    @include size(2.5rem, 2.5rem);
+                    margin: 6px 6px 0 0;
+                    background-color: $white-alpha-25;
+                    border: 1px solid $white-alpha-40;
+                    border-radius: 50%;
+                    transition: all .3s ease;
+
+                    img {
+                        filter: invert(26%) sepia(49%) saturate(3242%) hue-rotate(318deg) brightness(94%) contrast(91%);
+                        max-inline-size: 100%;
+                        object-fit: contain
+                    }
+
+                    @include breakpoints(xs) {
+                        @include size(2.1875rem, 2.1875rem);
+                    }
+
+                    &:hover {
+                        background-color: $main-color;
+
+                        img {
+                            filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

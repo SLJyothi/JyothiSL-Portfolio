@@ -1,0 +1,48 @@
+.bg-circles {
+    position: fixed;
+    inset-block-start: 0;
+    inset-inline-start: 50%;
+    block-size: 100%;
+    max-inline-size: 1200px;
+    inline-size: calc(100% - 30px);
+    transform: translateX(-50%);
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+
+        &.circle-1 {
+            @include size(60px, 60px);
+            background-color: $blue;
+            inset-inline-start: 5%;
+            inset-block-start: 10%;
+            opacity: .3;
+            animation: zoonInOut 8s linear infinite;
+        }
+
+        &.circle-2 {
+            @include size(80px, 80px);
+            background-color: $main-color;
+            inset-inline-start: 30%;
+            inset-block-start: 50%;
+            opacity: .4;
+            animation: bounceTop 5s ease-in-out infinite;
+        }
+
+        &.circle-3 {
+            @include size(120px, 120px);
+            background-color: $white;
+            inset-inline-end: -60px;
+            inset-block-start: 40%;
+            opacity: .6;
+        }
+
+        &.circle-4 {
+            @include size(50px, 50px);
+            background-color: $orange;
+            inset-inline-start: -30px;
+            inset-block-start: 80%;
+            opacity: .6;
+        }
+    }
+}

@@ -1,0 +1,196 @@
+/*-------------------------
+About Section
+----------------------------*/
+.about-section {
+    .about-img {
+        padding: 0 1rem;
+
+        .img-box {
+            background-color: $white-alpha-25;
+            border: 1px solid $white-alpha-40;
+            border-radius: 0.625rem;
+            max-inline-size: 22.5rem;
+            margin: auto;
+            overflow: hidden;
+            @include breakpoints(md){
+                margin-block-end: 1rem;
+            }
+
+            img {
+                max-inline-size: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .about-text {
+        padding: 0 1rem;
+
+        @include breakpoints(sm) {
+            margin-block-start: 0;
+        }
+
+        p {
+            line-height: 2;
+            margin-block-end: 20px;
+            text-align: justify;
+            inline-size: 92%;
+
+            @include breakpoints(sm) {
+                inline-size: 100%;
+            }
+        }
+
+        h3 {
+            @include font(500, 1.25rem, $blue-dark);
+            text-transform: capitalize;
+            margin: 20px 0;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+
+            .skill-item {
+                background-color: $white-alpha-25;
+                border: 1px solid $white-alpha-40;
+                border-radius: 20px;
+                padding: 5px 15px;
+                text-transform: capitalize;
+                margin: 0 10px 10px 0;
+
+                @include breakpoints(xs) {
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        .about-tabs {
+            margin-block-start: 20px;
+
+            .tab-item {
+                padding: 2px 0;
+                background-color: transparent;
+                border: none;
+                display: inline-block;
+                @include font(500, 1.25rem, $blue-dark);
+                text-transform: capitalize;
+                cursor: pointer;
+                margin: 0 1.875rem 0 0;
+                position: relative;
+                opacity: .5;
+                transition: all .3s ease;
+
+                @include breakpoints(xs) {
+                    font-size: 1rem;
+                }
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset-inline-start: 0;
+                    inset-block-end: 0;
+                    @include size(0%, 1px);
+                    background-color: $blue-dark;
+                    transition: inline-size .3s ease;
+                }
+
+                &:hover::before {
+                    inline-size: 100%;
+                }
+
+                &.active::before {
+                    inline-size: 100%;
+                    background-color: $main-color;
+                }
+
+                &.active {
+                    color: $main-color;
+                    opacity: 1;
+                    cursor: auto;
+                }
+            }
+
+        }
+
+        .tab-content {
+            padding: 40px 0;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            .timeline {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    @include size(1px, 100%);
+                    inset-inline-start: 5px;
+                    inset-block-start: 0;
+                    background-color: $main-color;
+                }
+
+                .timeline-item {
+                    margin-block-end: 30px;
+                    position: relative;
+                    padding: 10px 0 0 40px;
+
+                    &:last-child {
+                        margin-block-end: 0;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        @include size(11px, 11px);
+                        inset-block-start: 16px;
+                        inset-inline-start: 0;
+                        background-color: $main-color;
+                        border-radius: 50%;
+                    }
+
+                    .date {
+                        display: block;
+                        @include font(400, 1rem, $main-color);
+                        margin: 0 0 10px;
+
+                        @include breakpoints(xs) {
+                            font-size: .9rem;
+                        }
+                    }
+
+                    h4 {
+                        @include font(500, 1.125rem, $blue-dark);
+                        text-transform: capitalize;
+                        margin: 0 0 10px;
+
+                        @include breakpoints(xs) {
+                            font-size: 1rem;
+                        }
+
+                        span {
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+
+        .btn {
+            margin: 0 15px 15px 0;
+
+            @include breakpoints(xs) {
+                display: block;
+                inline-size: 11rem;
+                margin-inline: auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,166 @@
+/*-------------------------
+Header
+----------------------------*/
+.header {
+    padding: 20px 0 0;
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    inline-size: 100%;
+    z-index: 1;
+
+    .nav-toggler {
+        @include flex(center, center, row);
+        @include size(3.125rem, 3.125rem);
+        border: none;
+        border-radius: 50%;
+        background-color: $white-alpha-25;
+        border: 1px solid $white-alpha-40;
+        cursor: pointer;
+        margin: 0;
+        z-index: 1;
+        transition: opacity .5s ease-in-out;
+
+        &.hide {
+            opacity: 0;
+            transition: none
+        }
+
+        span {
+            @include size(24px, 2px);
+            background-color: $main-color;
+            position: relative;
+            transition: background-color .3s ease;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                @include size(100%, 100%);
+                inset-block-start: 0;
+                background-color: $main-color;
+                transition: all .3s ease;
+            }
+
+            &::before {
+                inset-inline-start: 0;
+                transform: translateY(-8px);
+            }
+
+            &::after {
+                inset-inline-end: 0;
+                transform: translateY(8px);
+            }
+        }
+    }
+
+    .nav {
+        position: fixed;
+        @include size(100%, 100%);
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        padding: 35px 15px;
+        overflow-y: auto;
+        visibility: hidden;
+
+        .nav-inner {
+            inline-size: 100%;
+            max-inline-size: 1200px;
+            min-block-size: calc(100vh - 70px);
+            margin: auto;
+            @include flex(center, center, row);
+            background-color: $white-alpha-25;
+            border: 1px solid $white-alpha-40;
+            border-radius: 1.875rem;
+            backdrop-filter: $backdrop-filter-blur;
+            padding: 50px 0;
+            opacity: 0;
+            transition: all .5s ease;
+
+            .nav-list {
+                .nav-item {
+                    text-align: center;
+
+                    .nav-link {
+                        @include font(500, 2.5rem, $blue-dark);
+                        text-transform: capitalize;
+                        display: block;
+                        padding: 8px 15px;
+                        transition: color .3s ease;
+                        position: relative;
+                        @include breakpoints(xs) {
+                            font-size: 2rem
+                        }
+
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            inset-inline-end: 0;
+                            inset-block-end: 0;
+                            @include size(0%, 50%);
+                            background-color: $white-alpha-25;
+                            z-index: -1;
+                            transition: inline-size .5s ease;
+                        }
+
+                        &:hover {
+                            color: $main-color;
+
+                            &::before {
+                                inline-size: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.active {
+        position: fixed;
+        inset-block-start: 35px;
+        padding: 20px 15px;
+
+        .container {
+            max-inline-size: 1200px;
+            margin: auto;
+        }
+
+        .nav-toggler {
+            span {
+                background-color: transparent;
+
+                &::before {
+                    transform: rotate(45deg);
+                }
+
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        .nav {
+            visibility: visible;
+
+            .nav-inner {
+                opacity: 1;
+            }
+        }
+    }
+
+    &:not(.active) {
+        .nav-toggler {
+            &:hover {
+                span {
+
+                    &::before,
+                    &::after {
+                        inline-size: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
